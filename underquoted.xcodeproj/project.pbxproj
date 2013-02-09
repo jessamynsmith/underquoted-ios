@@ -16,8 +16,7 @@
 		BE307CC316C583B2001F3FEC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BE307CC216C583B2001F3FEC /* Default.png */; };
 		BE307CC516C583B2001F3FEC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE307CC416C583B2001F3FEC /* Default@2x.png */; };
 		BE307CC716C583B2001F3FEC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE307CC616C583B2001F3FEC /* Default-568h@2x.png */; };
-		BE307CCA16C583B2001F3FEC /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE307CC816C583B2001F3FEC /* MainStoryboard_iPhone.storyboard */; };
-		BE307CCD16C583B2001F3FEC /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE307CCB16C583B2001F3FEC /* MainStoryboard_iPad.storyboard */; };
+		BE307CCA16C583B2001F3FEC /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE307CC816C583B2001F3FEC /* MainStoryboard.storyboard */; };
 		BE307CD016C583B2001F3FEC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE307CCF16C583B2001F3FEC /* ViewController.m */; };
 		BE307CD816C583B2001F3FEC /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE307CD716C583B2001F3FEC /* SenTestingKit.framework */; };
 		BE307CD916C583B2001F3FEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE307CB016C583B1001F3FEC /* UIKit.framework */; };
@@ -50,8 +49,7 @@
 		BE307CC216C583B2001F3FEC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		BE307CC416C583B2001F3FEC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		BE307CC616C583B2001F3FEC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		BE307CC916C583B2001F3FEC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		BE307CCC16C583B2001F3FEC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		BE307CC916C583B2001F3FEC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		BE307CCE16C583B2001F3FEC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		BE307CCF16C583B2001F3FEC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BE307CD616C583B2001F3FEC /* underquotedTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = underquotedTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,8 +119,7 @@
 			children = (
 				BE307CBF16C583B2001F3FEC /* AppDelegate.h */,
 				BE307CC016C583B2001F3FEC /* AppDelegate.m */,
-				BE307CC816C583B2001F3FEC /* MainStoryboard_iPhone.storyboard */,
-				BE307CCB16C583B2001F3FEC /* MainStoryboard_iPad.storyboard */,
+				BE307CC816C583B2001F3FEC /* MainStoryboard.storyboard */,
 				BE307CCE16C583B2001F3FEC /* ViewController.h */,
 				BE307CCF16C583B2001F3FEC /* ViewController.m */,
 				BE307CB716C583B1001F3FEC /* Supporting Files */,
@@ -238,8 +235,7 @@
 				BE307CC316C583B2001F3FEC /* Default.png in Resources */,
 				BE307CC516C583B2001F3FEC /* Default@2x.png in Resources */,
 				BE307CC716C583B2001F3FEC /* Default-568h@2x.png in Resources */,
-				BE307CCA16C583B2001F3FEC /* MainStoryboard_iPhone.storyboard in Resources */,
-				BE307CCD16C583B2001F3FEC /* MainStoryboard_iPad.storyboard in Resources */,
+				BE307CCA16C583B2001F3FEC /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,20 +303,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		BE307CC816C583B2001F3FEC /* MainStoryboard_iPhone.storyboard */ = {
+		BE307CC816C583B2001F3FEC /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				BE307CC916C583B2001F3FEC /* en */,
 			);
-			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		BE307CCB16C583B2001F3FEC /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BE307CCC16C583B2001F3FEC /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
+			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 		BE307CE016C583B2001F3FEC /* InfoPlist.strings */ = {
@@ -395,10 +383,13 @@
 		BE307CE916C583B2001F3FEC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "underquoted/underquoted-Prefix.pch";
 				INFOPLIST_FILE = "underquoted/underquoted-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -406,10 +397,13 @@
 		BE307CEA16C583B2001F3FEC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "underquoted/underquoted-Prefix.pch";
 				INFOPLIST_FILE = "underquoted/underquoted-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -418,6 +412,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/underquoted.app/underquoted";
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
@@ -435,6 +430,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/underquoted.app/underquoted";
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
@@ -467,6 +463,7 @@
 				BE307CEA16C583B2001F3FEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE307CEB16C583B2001F3FEC /* Build configuration list for PBXNativeTarget "underquotedTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +472,7 @@
 				BE307CED16C583B2001F3FEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
