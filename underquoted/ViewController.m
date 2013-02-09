@@ -62,7 +62,6 @@ NSMutableData *receivedData;
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 
 {
-    NSLog(@"trying to append data: %d", [receivedData length]);
     NSLog(@"didReceiveData: %d", [data length]);
     
     [receivedData appendData:data];
@@ -87,21 +86,36 @@ NSMutableData *receivedData;
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 
 {
-    NSLog(@"Succeeded! Received %d bytes of data", [receivedData length]);
+    NSLog(@"Received %d bytes of data", [receivedData length]);
     
     NSError *error;
-    NSDictionary *json = [NSJSONSerialization
+    NSDictionary *jsonArray = [NSJSONSerialization
                           JSONObjectWithData:receivedData
                           options:kNilOptions
                           error:&error];
     
-    NSArray* objects = [json objectForKey:@"objects"];
-    NSDictionary* quotation = [objects objectAtIndex:0];
-    NSDictionary* author = [quotation objectForKey:@"author"];
-    
-    self.quotation = [NSString stringWithFormat:@"%@\n\t- %@", [quotation objectForKey:@"text"], [author objectForKey:@"name"]];
-    
-    self.quotationTextView.text = self.quotation;
+    if (jsonArray) {
+        NSDictionary* meta = [jsonArray objectForKey:@"meta"];
+        NSNumber* totalObjects = [meta objectForKey:@"total_count"];
+        
+        if ([totalObjects intValue] > 0) {
+            NSArray* objects = [jsonArray objectForKey:@"objects"];
+            NSDictionary* quotation = [objects objectAtIndex:0];
+            NSDictionary* author = [quotation objectForKey:@"author"];
+            
+            self.quotation = [NSString stringWithFormat:@"%@\n\t- %@", [quotation objectForKey:@"text"], [author objectForKey:@"name"]];
+            NSLog(@"formatted quotation");
+            
+            self.quotationTextView.text = self.quotation;
+            
+            UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification,
+                                            self.quotationTextView);
+        } else {
+            NSLog(@"No objects received");
+        }
+    } else {
+        NSLog(@"Error parsing JSON: %@", error);
+    }
 }
 
 @end

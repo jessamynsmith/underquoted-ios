@@ -23,6 +23,8 @@
 		BE307CDA16C583B2001F3FEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE307CB216C583B1001F3FEC /* Foundation.framework */; };
 		BE307CE216C583B2001F3FEC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE307CE016C583B2001F3FEC /* InfoPlist.strings */; };
 		BE307CE516C583B2001F3FEC /* underquotedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE307CE416C583B2001F3FEC /* underquotedTests.m */; };
+		BEF6247316C702510071E11F /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BEF6247216C702510071E11F /* Icon.png */; };
+		BEF6247516C702580071E11F /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEF6247416C702580071E11F /* Icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		BE307CE116C583B2001F3FEC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BE307CE316C583B2001F3FEC /* underquotedTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = underquotedTests.h; sourceTree = "<group>"; };
 		BE307CE416C583B2001F3FEC /* underquotedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = underquotedTests.m; sourceTree = "<group>"; };
+		BEF6247216C702510071E11F /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		BEF6247416C702580071E11F /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,7 @@
 		BE307CA416C583B1001F3FEC = {
 			isa = PBXGroup;
 			children = (
+				BEF6247616C702F60071E11F /* Resources */,
 				BE307CB616C583B1001F3FEC /* underquoted */,
 				BE307CDD16C583B2001F3FEC /* underquotedTests */,
 				BE307CAF16C583B1001F3FEC /* Frameworks */,
@@ -158,6 +163,15 @@
 				BE307CE016C583B2001F3FEC /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BEF6247616C702F60071E11F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BEF6247416C702580071E11F /* Icon@2x.png */,
+				BEF6247216C702510071E11F /* Icon.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +250,8 @@
 				BE307CC516C583B2001F3FEC /* Default@2x.png in Resources */,
 				BE307CC716C583B2001F3FEC /* Default-568h@2x.png in Resources */,
 				BE307CCA16C583B2001F3FEC /* MainStoryboard.storyboard in Resources */,
+				BEF6247316C702510071E11F /* Icon.png in Resources */,
+				BEF6247516C702580071E11F /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
