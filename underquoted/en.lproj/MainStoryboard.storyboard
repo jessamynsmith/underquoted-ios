@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpg-KP-jGQ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="dYS-YG-Les"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Refresh">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="GetQuotation:" destination="2" eventType="touchUpInside" id="rhm-DR-dgo"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="The Underquoted" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRl-W4-erl">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="EZy-g1-oHS"/>
+                                    <constraint firstAttribute="width" constant="268" id="xuD-dZ-v19"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mk-Lq-HXD">
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="268" id="afx-4o-Ves"/>
+                                    <constraint firstAttribute="height" constant="261" id="hj9-7N-kt0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="4mk-Lq-HXD" firstAttribute="top" secondItem="3" secondAttribute="top" constant="83" id="2uZ-g7-Frm"/>
+                            <constraint firstItem="VRl-W4-erl" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="Pn4-bi-c7a"/>
+                            <constraint firstAttribute="bottom" secondItem="Qpg-KP-jGQ" secondAttribute="bottom" constant="34" id="fo3-UW-v2s"/>
+                            <constraint firstItem="VRl-W4-erl" firstAttribute="top" secondItem="3" secondAttribute="top" constant="32" id="g1n-L8-Ism"/>
+                            <constraint firstItem="4mk-Lq-HXD" firstAttribute="centerX" secondItem="Qpg-KP-jGQ" secondAttribute="centerX" type="default" id="x63-QJ-rIz"/>
+                            <constraint firstItem="4mk-Lq-HXD" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="27" id="yNb-EI-TvK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="quotationTextView" destination="4mk-Lq-HXD" id="KBp-aA-gqM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="GetQuotation:"/>
+                <relationship kind="action" name="buttonTapped:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="quotationTextView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

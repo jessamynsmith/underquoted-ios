@@ -10,4 +10,7 @@
 
 @interface ViewController : UIViewController
 
+- (IBAction)buttonTapped:(UIButton *)sender;
+@property (copy, nonatomic) NSString *quotation;
+
 @end
